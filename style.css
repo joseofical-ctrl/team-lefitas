@@ -15,11 +15,10 @@
     box-sizing: border-box;
 }
 
-/* --- ESTE ES EL ARREGLO PARA EL SCROLL HORIZONTAL --- */
 html, body {
-    overflow-x: hidden; /* Oculta todo lo que se salga a los lados */
+    overflow-x: hidden; 
     width: 100%;
-    max-width: 100vw; /* Asegura que no pase del 100% del ancho de la pantalla */
+    max-width: 100vw; 
     position: relative;
 }
 
@@ -30,16 +29,14 @@ body {
     background-image: url('');
     cursor: crosshair;
 }
-/* --------------------------------------------------- */
 
-/* Títulos estilo Póster de Cine */
 h1, h2, h3 {
     font-family: 'Anton', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
 
-/* --- HERO SECTION (Pantalla de Carga) --- */
+/* --- HERO SECTION --- */
 .hero {
     height: 100vh;
     position: relative;
@@ -63,7 +60,7 @@ h1, h2, h3 {
     pointer-events: none;
 }
 
-/* --- ANIMACIONES L4D2 (LINTERNA Y RASGUÑO) --- */
+/* --- LINTERNA Y RASGUÑO --- */
 .flashlight {
     position: absolute;
     top: 0;
@@ -71,8 +68,7 @@ h1, h2, h3 {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    z-index: 2; /* Oscurece el fondo pero deja el texto visible */
-    /* Estado inicial (luz en el centro) */
+    z-index: 2; 
     background: radial-gradient(circle 250px at 50% 50%, transparent 0%, rgba(10,10,10,0.95) 100%);
 }
 
@@ -97,7 +93,6 @@ h1, h2, h3 {
     animation: slash 0.6s ease-out forwards;
 }
 
-/* Orden de los dedos simulando un zarpazo */
 .s1 { height: 80%; animation-delay: 0.2s; }
 .s2 { height: 100%; animation-delay: 0.1s; } 
 .s3 { height: 95%; animation-delay: 0.3s; }
@@ -108,7 +103,6 @@ h1, h2, h3 {
     30% { background: var(--bright-red); box-shadow: 0 0 30px var(--blood-red); }
     100% { transform: scaleY(1); opacity: 0.1; background: var(--blood-red); box-shadow: none; }
 }
-/* --------------------------------------------- */
 
 .hero-content {
     position: relative;
@@ -131,16 +125,10 @@ h1, h2, h3 {
 
 @keyframes flicker {
     0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-        text-shadow: 
-            0 0 5px rgba(255,255,255,0.8),
-            0 0 20px rgba(255,255,255,0.4),
-            0 0 40px var(--blood-red);
+        text-shadow: 0 0 5px rgba(255,255,255,0.8), 0 0 20px rgba(255,255,255,0.4), 0 0 40px var(--blood-red);
         opacity: 1;
     }
-    20%, 24%, 55% {
-        text-shadow: none;
-        opacity: 0.3;
-    }
+    20%, 24%, 55% { text-shadow: none; opacity: 0.3; }
 }
 
 .hero h2 {
@@ -172,7 +160,6 @@ section {
 }
 
 .blood-drip { color: var(--bright-red); }
-.toxic-drip { color: var(--toxic-green); }
 
 /* --- TARJETAS DE SUPERVIVIENTES --- */
 .cards-container {
@@ -184,7 +171,7 @@ section {
 
 .survivor-card {
     background-color: var(--bg-panel);
-    width: 280px;
+    width: 300px; /* Un poco más anchas para que quepan las stats */
     border: 3px solid #333;
     position: relative;
     overflow: hidden;
@@ -193,7 +180,7 @@ section {
 }
 
 .survivor-img-container {
-    height: 380px;
+    height: 350px;
     overflow: hidden;
     position: relative;
     border-bottom: 3px solid #333;
@@ -226,7 +213,7 @@ section {
 .survivor-info h3 {
     font-size: 1.8rem;
     color: var(--text-main);
-    margin-bottom: 5px;
+    margin-bottom: 2px;
 }
 
 .survivor-role {
@@ -239,12 +226,14 @@ section {
     margin-bottom: 10px;
 }
 
+/* HUD Básico (Salud y Arma) */
 .stats-hud {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     color: var(--text-muted);
+    margin-bottom: 15px;
 }
 
 .stat-bar {
@@ -258,6 +247,36 @@ section {
 .stat-fill {
     height: 100%;
     background: var(--bright-red);
+}
+
+/* --- NUEVO: MINI-PANEL DE ESTADÍSTICAS POR JUGADOR --- */
+.survivor-stats-mini {
+    border-top: 1px solid #333;
+    padding-top: 12px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columnas */
+    gap: 10px;
+    font-size: 0.8rem;
+}
+
+.mini-stat {
+    display: flex;
+    flex-direction: column;
+}
+
+.mini-stat span:first-child {
+    color: var(--text-muted);
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+}
+
+.stat-num {
+    color: var(--bright-red);
+    font-family: 'Anton', sans-serif;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    text-shadow: 0 0 5px rgba(209, 0, 0, 0.4);
 }
 
 /* --- RESPONSIVE --- */
