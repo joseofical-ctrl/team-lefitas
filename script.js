@@ -38,9 +38,9 @@ const supervivientes = [
         foto: "img/jose.jpeg"
     },
     {
-        nombre: "EL LOCO",
-        rol: "Masoquista",
-        arma: "Su cuerpo",
+        nombre: "EL CUERNUDO",
+        rol: "DPS",
+        arma: "CUERNOS",
         salud: 55,
         foto: "img/gianper.jpeg"
     }
