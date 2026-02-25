@@ -44,7 +44,7 @@ const supervivientes = [
         trabajoEquipo: 92
     },
     {
-        nombre: "Gianper",
+        nombre: "Jan pier",
         rol: "Control",
         arma: "CUERNOS",
         salud: 55,
@@ -159,3 +159,4 @@ setTimeout(() => {
     });
 
 }, 100);
+
