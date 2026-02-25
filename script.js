@@ -39,7 +39,7 @@ const supervivientes = [
         foto: "img/jose.jpeg",
         // Datos de ejemplo para el segundo jugador:
         logros: 66,
-        infectados: 123520,
+        infectados: 124071,
         horas: 688,
         trabajoEquipo: 92
     },
