@@ -20,9 +20,9 @@ heroSection.addEventListener('mousemove', (e) => {
 // --- DATOS DE TU ESCUADRA (ESTADÍSTICAS REALES DE STEAM) ---
 const supervivientes = [
     {
-        nombre: "EL VIOLADO",
+        nombre: "Julio",
         rol: "Tanque",
-        arma: "Su poto",
+        arma: "Melee",
         salud: 30,
         foto: "img/tulio.jpeg",
         // ¡Datos sacados de tu captura de pantalla!
@@ -32,9 +32,9 @@ const supervivientes = [
         trabajoEquipo: 24     // Récord de compañeros protegidos
     },
     {
-        nombre: "EL CORRELON",
-        rol: "Escapar",
-        arma: "Sus piernas",
+        nombre: "Jose",
+        rol: "Carry",
+        arma: "AK-47",
         salud: 70,
         foto: "img/jose.jpeg",
         // Datos de ejemplo para el segundo jugador:
@@ -44,8 +44,8 @@ const supervivientes = [
         trabajoEquipo: 92
     },
     {
-        nombre: "EL CUERNUDO",
-        rol: "DPS",
+        nombre: "Gianper",
+        rol: "Control",
         arma: "CUERNOS",
         salud: 55,
         foto: "img/gianper.jpeg",
@@ -54,6 +54,18 @@ const supervivientes = [
         infectados: 3331,
         horas: 12,           
         trabajoEquipo: 28
+    },
+    {
+        nombre: "Miguel",
+        rol: "Support",
+        arma: "FRANCOTIRADOR",
+        salud: 55,
+        foto: "img/miguel.jpeg",
+        // Datos de ejemplo para el tercer jugador:
+        logros: 74,
+        infectados: 152892,
+        horas: 544,           
+        trabajoEquipo: 121
     }
 ];
 

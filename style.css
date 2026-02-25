@@ -147,7 +147,7 @@ h1, h2, h3 {
 /* --- SECCIONES GENERALES --- */
 section {
     padding: 100px 20px;
-    max-width: 1200px;
+    max-width: 1500px;
     margin: 0 auto;
 }
 
@@ -165,7 +165,7 @@ section {
 .cards-container {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 50px;
     flex-wrap: wrap; 
 }
 
