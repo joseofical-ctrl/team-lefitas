@@ -59,7 +59,7 @@ const supervivientes = [
         nombre: "Miguel",
         rol: "Support",
         arma: "FRANCOTIRADOR",
-        salud: 55,
+        salud: 40,
         foto: "img/miguel.jpeg",
         // Datos de ejemplo para el tercer jugador:
         logros: 74,
@@ -157,4 +157,5 @@ setTimeout(() => {
             animated = true;
         }
     });
+
 }, 100);
