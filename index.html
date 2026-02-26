@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Los Supervivientes | L4D2</title>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto+Condensed:wght@400;700&family=Permanent+Marker&family=Sedgwick+Ave&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -34,6 +34,48 @@
         <div class="cards-container" id="roster-container"></div>
     </section>
 
+    <section class="safe-room-section" id="safe-room">
+        <h2 class="section-title" data-aos="fade-left">EL REFUGIO <span class="blood-drip">.</span></h2>
+        
+        <div class="brick-wall" data-aos="zoom-in">
+            <p class="graffiti g1">Aquí sobrevivimos a la horda... y a los finales de la UPLA.</p>
+            
+            <p class="graffiti g2">Primo de Janpier lo atrasa xd</p>
+            
+            <p class="graffiti g3">Tank, papi de Miguel</p>
+            
+            <p class="graffiti g4">No asusten a la Witch, está llorando por Algoritmos y Estructura de Datos.</p>
+            
+            <p class="graffiti g5">Julio, deja de curarte con 80 de vida 😡</p>
+        </div>
+    </section>
+
+    <footer class="lobby-footer" id="lobby">
+        <div class="lobby-info" data-aos="fade-up">
+            <h3>SALA DE ESPERA</h3>
+            <p>Campaña: Gárgolas en la Ciudad | Dificultad: Experto | Servidor: Huancayo</p>
+        </div>
+        
+        <div class="ready-container" data-aos="zoom-in" data-aos-delay="200">
+            <a href="https://discord.gg/P7mxnrPG" class="ready-btn" id="ready-button">ESTOY LISTO</a>
+        </div>
+    </footer>
+
+    <div class="audio-player" id="audio-widget" data-aos="fade-left" data-aos-delay="1000">
+        <audio id="bg-music" loop>
+            <source src="/img/audio/saferoom.mp3" type="audio/mpeg">
+            Tu navegador no soporta el audio.
+        </audio>
+        
+        <button id="music-btn" class="music-btn">
+            <span id="music-icon">🔇</span>
+        </button>
+        
+        <div class="music-info">
+            <span class="music-title">Safe Room - L4D2</span>
+        </div>
+    </div>
+    
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>

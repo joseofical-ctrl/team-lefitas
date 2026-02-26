@@ -44,7 +44,7 @@ const supervivientes = [
         trabajoEquipo: 92
     },
     {
-        nombre: "Jan pier",
+        nombre: "Gianper",
         rol: "Control",
         arma: "CUERNOS",
         salud: 55,
@@ -59,7 +59,7 @@ const supervivientes = [
         nombre: "Miguel",
         rol: "Support",
         arma: "FRANCOTIRADOR",
-        salud: 40,
+        salud: 55,
         foto: "img/miguel.jpeg",
         // Datos de ejemplo para el tercer jugador:
         logros: 74,
@@ -157,6 +157,52 @@ setTimeout(() => {
             animated = true;
         }
     });
-
 }, 100);
 
+// --- LÓGICA DEL BOTÓN DE READY ---
+const readyButton = document.getElementById('ready-button');
+
+if (readyButton) {
+    readyButton.addEventListener('click', function(e) {
+        // Si no tienes un enlace puesto en el HTML, evitamos que la página salte hacia arriba
+        if (this.getAttribute('href') === '#') {
+            e.preventDefault(); 
+        }
+
+        // Cambiamos el texto y lo ponemos en "verde tóxico" simulando que ya aceptó
+        this.innerText = "INICIANDO...";
+        this.style.borderColor = "var(--toxic-green)";
+        this.style.color = "var(--toxic-green)";
+        this.style.textShadow = "0 0 10px var(--toxic-green)";
+        this.style.boxShadow = "0 0 30px rgba(92, 122, 41, 0.6), inset 0 0 15px rgba(92, 122, 41, 0.4)";
+        
+        // Lo regresamos a la normalidad después de 3 segundos
+        setTimeout(() => {
+            this.innerText = "ESTOY LISTO";
+            this.style = ""; // Limpia los estilos aplicados por JS
+        }, 3000);
+    });
+}
+
+// --- LÓGICA DEL AUDIO INMERSIVO ---
+const musicBtn = document.getElementById('music-btn');
+const bgMusic = document.getElementById('bg-music');
+const musicIcon = document.getElementById('music-icon');
+const audioWidget = document.getElementById('audio-widget');
+
+if (musicBtn && bgMusic) {
+    // Configura el volumen al 30% (música de fondo suave)
+    bgMusic.volume = 0.3;
+
+    musicBtn.addEventListener('click', () => {
+        if (bgMusic.paused) {
+            bgMusic.play();
+            musicIcon.innerText = "🔊";
+            audioWidget.classList.add('playing');
+        } else {
+            bgMusic.pause();
+            musicIcon.innerText = "🔇";
+            audioWidget.classList.remove('playing');
+        }
+    });
+}
